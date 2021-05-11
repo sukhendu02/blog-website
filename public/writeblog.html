@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a blog</title>
+
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>tinymce.init({ selector: 'textarea' });</script>
+
+    <!-- STYLING THIS PAGE  -->
+    <style>
+        .write{
+            text-align: center;
+            font-size: 50px;
+            color: #777676;
+        }
+        
+        .container{
+            text-align: center;
+        }
+        input  {
+             text-align: center;
+             width: 80%;
+             padding : 12px 20px;
+             margin: 8px 0;
+             box-sizing: border-box;
+             border: none;
+             border-bottom: 2px solid rgba(112, 110, 110, 0.795);
+        }
+        label{
+            color: rgba(46, 44, 44, 0.945);
+            font-weight: bold;
+        }
+        .blogsubmit{
+             height: 30px;
+             width: 85px;
+             border-radius: 15px;
+             color: rgb(69 71 72);
+             background: rgb(30, 168, 223);
+
+        }
+        
+    
+    </style>
+</head>
+<body>
+
+<h1 class="write">Write a blog</h1> 
+    <div class="container">
+        <form action="/writeblog" method="POST"  enctype="multipart/form-data">
+        <div class="writing-space">
+            <label for="">Title <br>
+                <input type="text" name="title" placeholder="write the blog title" required>
+                    <div class="auther">
+                         <label for="">Auther  <br>  
+                            <input type="text" placeholder="Auther" name="Auther">
+                            <div class="short">
+                                <label for="">Short description  <br>
+                                    <input type="text" placeholder="Write short description of blog" name="short_description" required>
+                                        <div class="blog">
+                                            <label for="">Write blog  <br>
+                                                 <input type="text" placeholder="write the full blog" name="blog" required>
+                                                 <div>
+                                                     <label for="">image
+                                                         <input type="file" name="image" multiple>
+                                                         <div class="form-group">
+
+                                                            <label for="description" class="text-white">Description</label>
+                                                            <textarea name="description" placeholder="Description" class="form-control">
+                                            
+                                                                
+                                                            </textarea>
+                                                        </div>
+
+                                                     </label>
+                                                 </div>
+                                             </label>
+                                        </div>
+                                </label>
+                           
+                            </div>
+                        </label>
+                    </div>
+            </label>
+        </div>
+      <button type="submit" class="blogsubmit">Submit    </button>
+    </form>
+</div>   
+
+
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Ask now</title>
+<link rel="stylesheet" href="style.css">
+<script src="myScript.js"></script>
+
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+ 
+<!-- <script>
+      
+    function popup(){
+        swal({
+title: "Good job!",
+text: "Sucessfully Submitted",
+icon: "success",
+button: "OK",
+})
+    }
+</script> -->
+
+</head>
+
+
+<body>
+
+    <header>
+        <div class="sidenav" style="width: 0;" id="mysidenav" >
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        
+            <a href="/">Home</a>
+            <a href="/blog">Blog</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+            <a href="/asknow">Ask now</a>
+            <h1>MYB</h1>
+            
+        </div>
+        <span style="font-size: 30px; cursor: pointer; margin-left: 12px;"  onclick="openNav()">&#9776 </span>  
+          <h1 style="display:inline">MYB</h1>
+          
+          
+        
+   
+    
+<nav class="navbar">
+    <ul class="navul">
+     
+    <li>  <a href="/">Home</a> </li>
+    <li>   <a href="/blog">Blog</a></li>
+    <li>   <a href="/about">About</a></li>
+    <li>   <a href="/contact">Contact</a></li>
+    <li><a href="/asknow">Ask now</a></li>
+    </ul>
+     
+</nav>
+</header>
+<br>
+<h3 style="text-align: center;">Have any question or query? Ask now.</h3><br>
+<h4 style="text-align: center;">Post your question here!!</h4>
+
+<!--          POST QUESTIONS FORM             -->
+<!-- <div class="alert alert-success" role="alert">
+    A simple success alert—check it out!
+  </div> -->
+
+<div class="q-form-container">
+
+    <form action="/asknow" onsubmit="alert('Your form has sumbitted Sucessfully')"  method="POST" >
+
+        <label for="q-name">Name</label><br>
+            <input type="text" style="width: 40%;" placeholder="Name" id="q-name" name="name" required> <br>
+
+    <br>
+             <label for="q-category"> Choose a Category:</label>
+    <select name="select"  id="cat-select" style="border: 2px solid rgba(128, 128, 128, 0.356);">
+        <option value="Select the Category">Select the Category</option>
+        <option value="Tech">Tech</option>
+        <option value="Entertainment">Entertainment</option>
+        <option value="Automobile">Automobile</option>
+        <option value="Spotrs">Spotrs</option>
+        <option value="English">English</option>
+        <option value="Other">Other</option>
+    </select><br>
+    
+    <br>
+   
+    <label for="question" >Question</label><br>
+    <input type="text" style="width: 75%; height: 50px;" placeholder= "Question" id="q-ques" name="question" required> <br>
+    
+    <br>
+   <!-- FORM SUBMIT BUTTON -->
+    <button type="submit"  value="submit" class="q-form-btn" >Submit</button>
+   
+    <!-- RESET BUTTON -->
+    <button type="reset" style="margin-left: 50px;" class="q-form-btn">Reset</button>
+
+</form>
+</div>
+<br>
+
+<!--            WRITE BLOG POSTS             -->
+<div>
+    <h4 style="text-align: center;">Good at writing blog posts? Write on below topics.
+    </h4><br>
+    <h3 style="color: gray; text-align: center;" >No topics yet...</h3>
+    <!-- <div class="ques-container">
+        <p style="padding: 5px;border: 1px solid gray; cursor:pointer ;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo assumenda illum similique distinctio, itaque earum ipsa nihil dolorum! Numquam reprehenderit dolor error fugiat quasi qui repellendus officia, laboriosam animi nisi.
+        <button class="write-blog-btn" style="float: right;">write</button></p>
+        <p style="padding: 5px;border: 1px solid gray; cursor:pointer ;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo assumenda illum similique distinctio, itaque earum ipsa nihil dolorum! Numquam reprehenderit dolor error fugiat quasi qui repellendus officia, laboriosam animi nisi.
+            <button class="write-blog-btn" style="float: right;">write</button></p>
+             -->
+            
+    </div>
+    
+</div>
+
+
+
+
+<!--                    FOOTER FOR ALL                   -->
+<footer>
+    <div>
+        <!-- <h6>All rights are reserved &#169</h6> -->
+        <p>Error in above data or content? <a href="/contact">Contact Us</a></p>
+
+        <!-- FOOTER MENU  -->
+        <div class="foot-container">
+            <ul class="foot-menu">
+     
+                <li>  <a href="/">Home</a> </li>
+                |
+                <li>   <a href="/blog">Blog</a></li>
+                |
+                <li>   <a href="/about">About</a></li>
+                |
+                <li>   <a href="/contact">Contact</a></li>
+                |
+                <li><a href="/asknow">Ask now</a></li>
+                </ul>
+        </div>
+        <br>
+        <!-- FOOTER SOCIAL MEDIA LINKS -->
+        <div class="foot-social" style="text-align: center;">
+            <p style=" color: black; font-weight: bold; ">Follow us on</p>
+         <h6 style="text-align: center;">comming soon!!</h6> 
+           <!-- <a href="#">a</a> -->
+            <!-- <a href="#">a</a> -->
+            <!-- <a href="#">a</a> -->
+        </div>
+
+    </div>
+</footer>
+
+<!--            FOOTER ENDS                  -->
+
+
+
+    
+    
+</body>
+</html>

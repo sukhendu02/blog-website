@@ -1,0 +1,306 @@
+*{
+    margin: 0;
+    border: 0;
+
+}
+.welcome-img{
+    margin: 10px 0 10px 0;
+}
+nav{
+    
+    background-color: rgba(127, 255, 212, 0.226);
+    padding: 5px;
+    text-align: center;
+    margin-top: 8px;
+    
+}
+.navul{
+    list-style-type: none;
+    padding: 0;
+    
+}
+.navbar li {
+    display: inline;
+    padding: 0 25px 0 25px;
+   
+}
+.navbar li a{
+  
+    display: inline;
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: serif, Arial, Helvetica, sans-serif;
+
+    
+}
+.navbar li a:hover{
+    color: rgba(128, 128, 128, 0.781);
+    
+
+}
+.navbar li a:active{
+    color: rgba(128, 128, 128, 0.781);
+    
+
+}
+
+#mysidenav{
+    height: 100%;
+     width: 0;
+     position: fixed;
+     transition: 0.5s;
+     background-color: black;
+     z-index: 1;
+     overflow: hidden;
+    
+
+}
+.sidenav a{
+    display: block;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    
+
+}
+.sidenav a:hover{
+    color: rgba(128, 128, 128, 0.781);
+
+}
+
+.closebtn{
+    display: inline;
+    font-size: 25px;
+
+}
+
+.A-D-C{
+    color: gray;
+}
+
+
+/*blog list container style*/
+.card{
+    display: inline-block;
+    width: 400px;
+    background: rgba(236, 236, 236, 0.877);
+    margin: 10px;
+    border: 1px solid rgba(219, 214, 214, 0.904);
+
+}
+.container{
+    text-align: center;
+    
+    
+
+}
+.knowmore{
+    margin-bottom: 5px;
+    border-radius: 2px;
+    cursor: pointer;
+    height: 24px;
+    background-color: rgba(127, 255, 212, 0.788);
+}
+
+/*contact us styling*/
+.social-container{
+    margin: 5px 100px 5px 100px;
+    border: 2px solid silver;
+    border-radius: 5px;
+    text-align: center;
+    background: linear-gradient( to right, rgba(238, 130, 238, 0.589), rgba(0, 0, 255, 0.616), rgba(255, 0, 0, 0.555), rgba(255, 192, 203, 0.61), rgba(128, 0, 128, 0.589));
+}
+/*contact form styling*/
+.form-container{
+    
+    text-align: center;
+    display: block;
+    border: 2px solid silver;
+    margin: 0 15% 0 15%;
+    border-radius: 5px;
+    
+    
+}
+.form-container input{
+    border: 2px solid grey;
+    height: 27px;
+    width: 450px;
+    
+}
+
+#con-com{ /* contact box styling */
+    width: 450px;
+    height: 150px;
+    border: 2px solid grey
+
+}
+#con-submit{
+    width: 100px;
+    height: 40px;
+    border-radius: 8px;
+    margin: 10px;
+    background: skyblue;
+    cursor: pointer;
+}
+ /* Ask now styling */
+/* posting question styling */
+.q-form-container{
+    padding-left: 15%;
+}
+.q-form-container input{
+    height: 25px;
+    border: 2px solid rgba(128, 128, 128, 0.356);
+    border-radius: 5px;
+
+}
+.q-form-container button{
+    cursor: pointer;
+    background-color: rgba(127, 255, 212, 0.822);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+
+
+/* write blog styling */
+.ques-container{
+    justify-content: center;
+    text-align:left ;
+    margin: 0 15% 0 15%;
+    background-color: rgba(176, 180, 179, 0.966);
+}
+.write-blog-btn{
+    justify-content: center;
+}
+/* Home page styling */
+
+  .welcome-image{      /*welcome img styling and sizing    */
+ width: 50%;
+ height: 300px;
+ margin-left: auto;
+ margin-right: auto;
+ display: block;
+}
+
+
+
+
+
+
+/* Blog templete style */
+
+.blog-container{
+    margin-top: 15px;
+    margin: 0 20% 0 20% ;
+
+   
+}
+.adc{
+    color: grey;
+}
+.img1{
+    text-align: center;   
+}
+.img2{
+    text-align: center;   
+}
+
+
+
+
+
+/* footer styling */
+
+footer{
+    background-color: rgba(128, 128, 128, 0.767);
+    position: absolute;
+    /* left: 0; */
+    /* bottom: 0; */
+    padding-top: 10px;
+    padding-bottom: 0;
+    width: 100%;
+    margin-top: 10px;
+
+}
+/* footer menu */
+.foot-menu{
+    list-style-type: none;
+    
+    text-align: center;
+
+}
+.foot-menu li{
+    display: inline;
+    padding: 0 50px 0 50px;   
+}
+
+.foot-menu li a{
+text-decoration: none;
+color: black;
+}
+
+
+/* MEDIA QUIRES */
+
+/* MEDIA QUARIES FOR TABLET */
+@media screen and (max-width:1024px){
+ nav{
+display:none;    
+ }
+}
+
+/* MEDIA QUARIES FOR MOBILE PHONES */
+
+@media screen and (max-width:480px){
+   .blog-cont{
+  text-align: center;
+    }
+    .foot-menu{
+        width: 100%;
+        padding: 0;
+    }
+    .foot-menu li{
+        padding: 10px;
+        font-size: 13px;
+    }
+    header{
+        border-bottom: rgba(187, 186, 186, 0.904) solid 1px;
+    }
+    .container-bl{
+        text-align: center;
+    }
+
+    /* CONTACT PAGE */
+    
+.social-container{
+    width: 100%;
+    /* text-align: center; */
+    margin: 0;
+}
+.form-container{
+    margin: 0;
+}
+.form-container input{
+    width: 85%;
+}
+#con-com{
+    width: 90%;
+}
+/* ASK NOW PAGE */
+.q-form-container{
+    padding: 0;
+    margin: 0 20px 0 20px;
+}
+.q-form-container input{
+    width: 400px;
+}
+
+.welcome-image{
+    width: 90%;
+    height: 200px;
+}
+
+  
+   }

@@ -1,0 +1,30 @@
+/* MEDIA QUARIES FOR TABLET */
+@media screen and (max-width:1024px){
+    nav{
+   display:none;    
+    }
+   }
+   
+   /* MEDIA QUARIES FOR MOBILE PHONES */
+   
+   @media screen and (max-width:480px){
+      .blog-cont{
+     text-align: center;
+       }
+       .foot-menu li{
+           padding: 10px;
+       }
+       header{
+           border-bottom: rgba(187, 186, 186, 0.904) solid 1px;
+       }
+       .container-bl{
+           text-align: center;
+       }
+       .in-Auther, .in-title {
+        width: 90%;
+       }
+       .in-sd {
+        width: 80%;
+       }
+     
+      }

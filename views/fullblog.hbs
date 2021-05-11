@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    
+    <style>
+     *{
+         margin-left: 0;
+         margin-top: 0;
+     }
+        .container{
+           margin: 0 150px 0 150px;
+           padding: 0 50px 0 50px;
+        }
+        .A-D-C{
+            color: grey;
+
+        }
+        
+#mysidenav{
+    height: 100%;
+     width: 0;
+     position: fixed;
+     transition: 0.5s;
+     background-color: black;
+     z-index: 1;
+     overflow: hidden;
+    
+
+}
+.sidenav a{
+    display: block;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    
+
+}
+.sidenav a:hover{
+    color: rgba(128, 128, 128, 0.781);
+
+}
+
+.closebtn{
+    display: inline;
+    font-size: 25px;
+
+}
+
+
+/* footer styling */
+
+footer{
+    background-color: rgba(128, 128, 128, 0.767);
+    position: absolute;
+    /* left: 0; */
+    /* bottom: 0; */
+    padding-top: 10px;
+    padding-bottom: 0;
+    width: 100%;
+    margin-top: 10px;
+
+}
+/* footer menu */
+.foot-menu{
+    list-style-type: none;
+    
+    text-align: center;
+
+}
+.foot-menu li{
+    display: inline;
+    padding: 0 50px 0 50px;   
+}
+
+.foot-menu li a{
+text-decoration: none;
+color: black;
+}
+  {{!-- MEDIA QUIRES --}}
+  @media screen and (max-width:480px){
+      header{
+          width: 100%;
+          margin: o;
+          border-bottom: rgba(187, 186, 186, 0.904) solid 1px
+      }
+      .container{
+          margin: 0;
+             margin-top: 5px;
+             padding: 0;
+        width: 100%;
+      }
+       .foot-menu li{
+        padding: 10px;
+        text-align: center;
+            font-size: 13px;
+    }
+    .foot-menu{
+        padding:0;
+    }
+    footer{
+        width: 100%;
+    }
+    img{
+        width: 90%;
+            display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .blog-container{
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+
+  }
+  /* MEDIA QUARIES FOR TABLET */
+@media screen and (max-width:1024px){
+     header{
+          width: 100%;
+          margin: o;
+          border-bottom: rgba(187, 186, 186, 0.904) solid 1px
+      }
+      .container{
+          margin: 0;
+         padding: 0;
+
+         margin-top: 5px
+      }
+       .foot-menu li{
+        padding: 10px;
+    }
+    footer{
+        width: 100%;
+    }
+
+}
+
+    </style>
+<script>
+    function openNav(){
+    document.getElementById("mysidenav").style.width ="250px";
+    }
+    function closeNav(){
+    document.getElementById("mysidenav").style.width="0";
+    }
+
+</script>
+</head>
+<body>
+    <header>
+        <div class="sidenav" style="width: 0;" id="mysidenav" >
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        
+            
+            <a href="/">Home</a>
+            <a href="/blog">Blog</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+            <a href="/asknow">Ask now</a>
+            <h1>MYB</h1>
+            
+        </div>
+        <span style="font-size: 30px; cursor: pointer; margin-left: 12px;"  onclick="openNav()">&#9776 </span>  
+          <h1 style="display:inline">MYB</h1>
+    </header>
+
+
+    {{!-- FULL BLOG TEMPLETE --}}
+{{#with blogs}}
+    <div class="container">
+      
+        <div class="blog-container">
+           
+            <div class="title-container">
+                
+                <h2>{{title}} </h2>
+                <div class="A-D-C-container">
+                    <h4 class="A-D-C">by {{Auther}} on {{Date}} | {{min}} min</h4>
+                        <div class="catagory-show">
+                            <h5 style="color: rgba(58, 57, 57, 0.849) ;    font-family: arial; font-weight: bold;">Catagory >> {{select}} </h5>
+                             <div>
+                                 <p>{{{blog}}} </p>
+                           
+                             </div>
+                        </div>
+
+
+                   
+
+                </div>
+                
+
+            </div>
+              
+        </div>
+    </div>
+{{/with}}
+
+
+{{#with latestblogs}}
+    <div class="container">
+      
+        <div class="blog-container">
+           
+            <div class="title-container">
+                
+                <h2>{{title}} </h2>
+                <div class="A-D-C-container">
+                    <h4 class="A-D-C">by {{Auther}} on {{Date}} | {{min}}min</h4>
+                        <div class="catagory-show">
+                            <h6 style="color: rgba(58, 57, 57, 0.849); ">Catagory >> {{select}} </h6>
+                             <div>
+                                 <p>{{{blog}}} </p>
+                           
+                             </div>
+                        </div>
+
+
+                   
+
+                </div>
+                
+
+            </div>
+              
+        </div>
+    </div>
+{{/with}}
+
+
+
+
+<!--                    FOOTER FOR ALL                   -->
+<footer>
+    <div>
+       
+        <p>Error in above data or content? <a href="/contact">Contact Us</a></p>
+
+        <!-- FOOTER MENU  -->
+        <div class="foot-container">
+            <ul class="foot-menu">
+     
+                <li>  <a href="/">Home</a> </li>
+                |
+                <li>   <a href="/blog">Blog</a></li>
+                |
+                <li>   <a href="/about">About</a></li>
+                |
+                <li>   <a href="/contact">Contact</a></li>
+                |
+                <li><a href="/asknow">Ask now</a></li>
+                </ul>
+        </div>
+        <br>
+        <!-- FOOTER SOCIAL MEDIA LINKS -->
+        <div class="foot-social" style="text-align: center;">
+            <p style=" color: black; font-weight: bold; ">Follow us on</p>
+         <h6 style="text-align: center;">comming soon!!</h6> 
+           <!-- <a href="#">a</a> -->
+            <!-- <a href="#">a</a> -->
+            <!-- <a href="#">a</a> -->
+        </div>
+
+    </div>
+</footer>
+
+<!--            FOOTER ENDS                  -->
+
+
+</body>
+</html>

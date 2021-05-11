@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Blog</title>
+<link rel="stylesheet" href="style.css">
+<script src="myScript.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<style>
+    .container-bl{
+        margin: 20px;
+    }
+       .card1{
+        
+         text-align: center;
+         height: 200px;
+         width: 278px;
+         display: inline-table;
+         background-color: rgba(210, 241, 247, 0.904);
+         padding: 10px;
+         border-radius: 10px;
+         margin: 10px;
+         position: relative;
+       }
+     .see-all{
+        text-align: center;
+        height: 35px;
+        width: 100px;
+        border-radius: 8px;
+        background-color: rgba(70, 170, 236, 0.829);
+        cursor: pointer;
+        
+    }
+    
+    .knowmore{
+        display: inline-block;
+        position: relative;
+        border-radius: 8px;
+        background-color: rgb(132, 201, 247);
+    }
+</style>
+</head>
+
+
+<body>
+
+    <header>
+        <div class="sidenav" style="width: 0;" id="mysidenav" >
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        
+            
+            <a href="/">Home</a>
+            <a href="/blog">Blog</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+            <a href="/asknow">Ask now</a>
+            <h1>MYB</h1>
+            
+        </div>
+        <span style="font-size: 30px; cursor: pointer; margin-left: 12px;"  onclick="openNav()">&#9776 </span>  
+          <h1 style="display:inline">MYB</h1>
+          
+          
+    
+<nav class="navbar">
+    <ul class="navul">
+     
+    <li>   <a href="/">Home</a> </li>
+    <li>   <a href="/blog">Blog</a></li>
+    <li>   <a href="/about">About</a></li>
+    <li>   <a href="/contact">Contact</a></li>
+    <li>   <a href="/asknow">Ask now</a></li>
+    </ul>
+     
+</nav>
+</header>
+<br>
+
+<!-- blog posts lists -->
+<div class="container-bl">
+    {{#each blogs}}
+    
+  <div class="card1">
+      
+        <h3>{{title}}</h3>
+        <div class="A-D-C"><h6>{{Auther}}  {{Date}}   {{catagory}} </h6></div>
+                <p>{{short_description}}</p>
+                  <div><a href="/blog/{{_id}}"><button class="knowmore"> knowmore
+                     </button></a></div>
+
+                    </div>
+                    {{/each}}
+                 </div>
+
+
+
+
+<!--                    FOOTER FOR ALL                   -->
+<footer>
+    <div>
+        {{!-- <h6>All rights are reserved &#169</h6> --}}
+        <p>Error in above data or content? <a href="/contact">Contact Us</a></p>
+
+        <!-- FOOTER MENU  -->
+        <div class="foot-container">
+            <ul class="foot-menu">
+     
+                <li>  <a href="/">Home</a> </li>
+                |
+                <li>   <a href="/blog">Blog</a></li>
+                |
+                <li>   <a href="/about">About</a></li>
+                |
+                <li>   <a href="/contact">Contact</a></li>
+                |
+                <li><a href="/asknow">Ask now</a></li>
+                </ul>
+        </div>
+        <br>
+        <!-- FOOTER SOCIAL MEDIA LINKS -->
+        <div class="foot-social" style="text-align: center;">
+            <p style=" color: black; font-weight: bold; ">Follow us on</p>
+         <h6 style="text-align: center;">comming soon!!</h6> 
+           <!-- <a href="#">a</a> -->
+            <!-- <a href="#">a</a> -->
+            <!-- <a href="#">a</a> -->
+        </div>
+
+    </div>
+</footer>
+
+<!--            FOOTER ENDS                  -->
+
+
+
+</body>
+</html>
